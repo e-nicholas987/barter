@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+
+
+:root {
+  --main-transition: 0.5s all ease;
+}
+/* base style */
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #646464;
+}
+p,
+h1,
+h2,
+h3,
+h4.h5,
+h6 {
+  color: #646464;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+button {
+  display: inline-block;
+  border: none;
+}
+
+main {
+  transition: 0.7s ease;
+}
+/* Main */
+
+
+main {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  transition: 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Successful trades */
+
+.successful-traders {
+  display: none;
+}
+
+.successful-traders p {
+  color: #e0732f;
+  margin-bottom: 0.8rem;
+}
+
+.successful-traders div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.successful-traders div .avatars {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  /* justify-content: space-between; */
+}
+.successful-traders div img {
+  width: 40px;
+  height: 40px;
+}
+.successful-traders div .chevron-left {
+  margin-right: 1.5rem;
+}
+.successful-traders div .chevron-right {
+  margin-left: 1.5rem;
+}
+
+/* Hero */
+img {
+  overflow: hidden;
+  width: 100%;
+}
+div.hero {
+  background: url("../assets/hero.png") no-repeat center center/cover;
+  height: 484px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.hero .text-content {
+  max-width: 701px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 1.5rem 0.2rem;
+  border-radius: 8px;
+  font-size: 42px;
+}
+
+/* Product grids*/
+
+article {
+  padding: 4rem 2rem;
+  border: 1px solid #e0732f;
+}
+
+article .section-title {
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0.5rem 0 3.5rem 0;
+}
+
+article .grid-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+article .grid-items .card {
+  position: relative;
+  border-radius: 10px;
+}
+article .grid-items .card img {
+  border-radius: 10px;
+}
+
+article .grid-items .card .tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(243, 243, 243, 0.8);
+  border-radius: 0px 0px 15px 15px;
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #141414;
+}
+article.new-trade .grid-items .card .tag,
+article.around-me .grid-items .card .tag {
+  border-radius: 0px 0px 10px 10px;
+}
+
+article .grid-items .card .tag a {
+  font-weight: bold;
+  color: #141414;
+}
+article.new-trade .grid-items .card .tag a {
+  font-weight: 400;
+}
+
+article.new-trade .grid-items .card .tag a span {
+  color: #e0732f;
+}
+
+@media (max-width: 768px) {
+  div.hero {
+    padding: 0 2rem;
+  }
+  div.hero .text-content {
+    font-size: 32px;
+  }
+
+  article .grid-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 632px) {
+  .successful-traders {
+    display: block;
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  div.hero {
+    height: 230px;
+  }
+  div.hero .text-content {
+    font-size: 16px;
+    border-radius: 0;
+  }
+
+  article {
+    padding: 0;
+    border: none;
+  }
+
+  article .grid-items {
+    gap: 1rem;
+  }
+  article .section-title {
+    font-size: 16px;
+    margin: 0.5rem 0 0.8rem 0;
+  }
+  article .grid-items .card .tag {
+    font-size: 10px;
+  }
+}

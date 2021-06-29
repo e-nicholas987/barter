@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+html {
+    background: #FAFAFA !important;
+}
+main {
+    margin: 10vh 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    color: #646464;
+}
+#welcome {
+    display: none;
+}
+.notDesktoplogo {
+    width: 100px;
+    height: 100px;
+}
+#form-login {
+    width: 100%;
+}
+#form-login input {
+    box-sizing: content-box;
+    margin: 5px 0px 45px;
+    border-radius: 8px;
+    border-color: #FFB217;
+    height: 30px;
+    width: 100%;
+}
+#forgot-password {
+    position:absolute;
+    right: 10vw;
+}
+#form-login button {
+    margin-top: 60px;
+    background-color: #FFB217;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+#socials {
+    margin: 15px ;
+    width: 100% ;
+    display: flex ;
+    justify-content: space-evenly ;
+}
+.social_login {
+    border-radius: 100px;
+    width: 25px ;
+    height: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+    header, footer {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    main {
+        margin: 81px 60px;
+        border: 1px solid #E0732F;
+        padding: 60px 20vw;
+    }
+    .notDesktoplogo {
+        display: none;
+    }
+    #welcome {
+        display: block;
+        font-weight: 800;
+        Font-size: 42px;
+    }
+    #forgot-password {
+        position:static;
+    }
+}

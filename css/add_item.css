@@ -1,0 +1,280 @@
+:root {
+  --main-transition: 0.5s all ease;
+}
+/* base style */
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #646464;
+}
+p,
+h1,
+h2,
+h3,
+h4.h5,
+h6 {
+  color: #646464;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+button {
+  display: inline-block;
+  border: none;
+}
+
+main {
+  transition: 0.7s ease;
+}
+
+header nav.desktop ul li {
+  background: none !important;
+}
+header nav.desktop ul li button {
+  margin-top: 0 !important;
+  cursor: pointer;
+  background: #e0732f;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+form.add-item .image-upload input {
+  display: none;
+}
+
+form.add-item .image-upload .upload {
+  color: #e0732f;
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-modal {
+  display: block;
+  overflow-y: scroll;
+  position: fixed;
+  padding: 113px 3rem 3rem 3rem;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+form.add-item {
+  display: none;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  right: 4rem;
+  left: 4rem;
+  padding: 3rem;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+form.add-item .image-upload {
+  flex-basis: 442px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+form.add-item .image-upload h3 {
+  color: #333333;
+}
+
+
+form.add-item .image-upload .box {
+  max-width: 442px;
+  height: 215px;
+  left: 124px;
+  top: 329px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #e0732f;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+form.add-item .image-upload .file {
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+form.add-item .image-upload .file span {
+  font-weight: 600;
+}
+form.add-item .image-upload .box img {
+  height: 112px;
+  width: 112px;
+}
+
+form.add-item .item-details {
+  flex-basis: 50%;
+}
+form.add-item .item-details .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+form.add-item .item-details .grid .text-area {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+form.add-item .item-details .grid .text-area label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+form.add-item .item-details .grid textarea {
+  width: 100%;
+}
+
+form.add-item label {
+  color: #333333;
+}
+
+form.add-item .item-details .grid input,
+form.add-item .item-details .grid textarea,
+form.add-item .item-details .grid select {
+  font-size: 16px;
+  border: 1px solid #e0732f;
+  padding: 0.5rem;
+  color: #646464;
+  border-radius: 8px;
+}
+
+form.add-item .item-details input[type="checkbox"] {
+  width: unset;
+  margin-top: 0.5rem;
+  margin-right: 0.2rem;
+}
+form.add-item .item-details .grid input:focus,
+form.add-item .item-details .grid textarea:focus,
+form.add-item .item-details .grid select:focus {
+  outline: none;
+  border: 1px solid #e0732f;
+}
+
+form.add-item .item-details button {
+  cursor: pointer;
+  background: #e0732f;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+form.add-item .item-details button.mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+  .form-modal {
+    background: none;
+    padding: 0;
+  }
+
+  form.add-item {
+    flex-direction: column;
+  }
+
+  form.add-item .image-upload {
+    flex-basis: unset;
+  }
+  form.add-item .image-upload h3 {
+    text-align: center;
+  }
+  form.add-item .image-upload .box {
+    max-width: 100%;
+  }
+  form.add-item .item-details .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+  }
+  form.add-item .item-details button {
+    margin: auto;
+    margin-top: 1rem;
+    display: block;
+  }
+}
+@media (max-width: 484px) {
+  form.add-item .image-upload .box {
+    width: 282px;
+    height: 162px;
+    margin: auto;
+  }
+  form.add-item .image-upload h3 {
+    color: #333333;
+    font-size: 16px;
+  }
+  label {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  form.add-item {
+      padding: 2rem;
+  }
+  form.add-item .image-upload * {
+    font-size: 12px;
+  }
+  form.add-item .item-details .grid input,
+  form.add-item .item-details .grid input::placeholder,
+  form.add-item .item-details .grid textarea,
+  form.add-item .item-details .grid select {
+    font-size: 12px;
+    padding: 0.5rem 0.3rem;
+  }
+  form.add-item .item-details button.desktop {
+      display: none;
+  }
+  form.add-item .item-details button.mobile {
+    padding: 8px 10px 8px 16px;
+    display: flex;
+    align-items: center;
+    gap:.8rem;
+    background: #ffb217;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+  }
+  form.add-item .item-details .disclaimer {
+    margin-top: 1.5rem;
+  }
+}
